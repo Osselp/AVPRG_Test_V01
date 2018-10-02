@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>Aufgabe 2 Testing</title>
+<body>
+
+<h1>Header_1 fuer Aufgabe 2</h1>
+<h1>Eine Nummer zwischen 0 und 127 ist gefordert</h1>
+
+<input type="text" id="myInput">    <!-- User Input-->
+<button id="myButton">Klick to convert</button>
+<div id="outputText"></div>         <!-- Site Output-->
+
+<script>
+    //Java Script
+    var allFrequencies = 
+
+    function calculateFrequency(){
+        var inputValue = document.getElementById("myInput").value;  //Element mit ID "myInput" wird verwendet
+        if(inputValue <= 127 && inputValue >=0 && inputValue !==""){
+            document.getElementById("outputText").innerHTML = "Lösung " + allFrequencies[inputValue];
+
+        }else{
+            document.getElementById("outputText").innerHTML = "Bitte nochmal eine Zahl eingeben!";
+        }
+    }
+
+    document.getElementById("myButton").addEventListener("click", function(){
+        calculateFrequency();
+    });
+
+</script>
+
+</body>
+</html> 
