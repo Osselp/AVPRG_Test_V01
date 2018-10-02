@@ -1,5 +1,5 @@
 //Java Script
-var allFrequencies = 
+var allFrequencies =1; 
 
 function calculateFrequency(){
     var inputValue = document.getElementById("myInput").value;  //Element mit ID "myInput" wird verwendet
