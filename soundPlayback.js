@@ -1,8 +1,24 @@
-var context = new AudioContext();
-var sound = new Audio("sounds/sound.wav");
-var soundNote =context.createMediaElementSourceNode(sound);
-var gainNode = context.createGain();
-gainNode.gain.value=0.8;
-sound.connect(gainNode);
-gainNode.connect(cont.destination);
-sound.play();
+var context = new AudioContext();   //Besser global geeignet
+
+var drumpads = document.getElementsByClassName("drumpad");
+soundbuffers=[];
+
+for(let i=0; i< drumpads.length;i++){
+    soundbuffers[i] = new Audio("sounds/sound"+(i+1)+".wav");
+    var soundNode = context.createMediaElementSource(soundbuffers[i]);
+    var gainNode = context.createGain();
+    gainNode.gain.value=0.8;
+
+    soundNode.connect(gainNode);
+    gainNode.connect(context.destination);
+
+    drumpads[i].addEventListener("mousedown", function(){
+        playSound //Missing Part
+    })
+}
+
+function playSound(value){
+    soundbuffers[value].play;
+}
+
+

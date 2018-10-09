@@ -12,6 +12,14 @@ function calculateFrequency(){
     }
 }
 
+function musicFunction(){
+
+}
+
 document.getElementById("myButton").addEventListener("click", function(){
     calculateFrequency();
+});
+
+document.getElementById("topLeft").addEventListener("click", function(){
+ musicFunction();
 });
